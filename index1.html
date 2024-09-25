@@ -1,46 +1,84 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>ExploreRiga</title>
-        <link rel="stylesheet" href="style.css">
-        <link rel="preconnect" href="https://fonts.googleapis.com">
-        <link href="https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&display=swap" rel="stylesheet">
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
-    </head>
-    <body>
-        <section class="header">
-            <nav>
-                <div class="nav-links" id="navLinks">
-                    <i class="fa fa-times" onclick="hideMenu()"></i>
-                    <ul>
-                        <li><a href="#">HOME</a></li>
-                        <li><a href="#">ABOUT</a></li>
-                        <li><a href="#">MUSEUMS</a></li> 
-                        <li><a href="#">CONTACTS</a></li>
-                    </ul>
-                </div>
-                <i class="fa fa-bars" onclick="showMenu()"></i>
-            </nav>
-            <div class="text-box">
-                <h1>Explore Riga</h1>
-                <p>Comprehensive guide to the city of Riga's cultural events and local dining experiences.</p>
-                <a href="#" class="hero-btn">Visit us To Know More</a>
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ExploreRiga</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+</head>
+
+<body>
+    <section class="header">
+        <nav>
+            <div class="nav-links" id="navLinks">
+                <i class="fa fa-times" onclick="hideMenu()"></i>
+                <ul>
+                    <li><a href="#">HOME</a></li>
+                    <li><a href="#">ABOUT</a></li>
+                    <li><a href="#">MUSEUMS</a></li>
+                    <li><a href="#">CONTACTS</a></li>
+                </ul>
             </div>
-        </section>
+            <i class="fa fa-bars" onclick="showMenu()"></i>
+        </nav>
+        <div class="text-box">
+            <h1>Explore Riga</h1>
+            <p>Comprehensive guide to the city of Riga's cultural events and local dining experiences.</p>
+            <a href="#" class="hero-btn">Visit us To Know More</a>
+        </div>
+    </section>
 
 
-<!------------- JavaScript for Menu------->
 
-        <script>
-            var navLinks = document.getElementById("navLinks");
-            function showMenu(){
-              
-                navLinks.style.right = "0";
-            }
-            function hideMenu(){
-                navLinks.style.right = "-200px";
-            }
-        </script>
-    </body>
+
+
+    <!-------- Places ----->
+
+    <section class="places">
+        <h1>Places to visit</h1>
+        <p>blablalalfff</p>
+
+        <div class="row">
+            <div class="places-col">
+                <img src="https://s.inyourpocket.com/gallery/257731.jpg">
+                <h3>Restaurants</h3>
+                <p>grgergergergrggerg</p>
+            </div>
+            <div class="places-col">
+                <img src="https://assets.architecturaldigest.in/photos/60081fc808ae763b9ae83f5f/16:9/w_2560%2Cc_limit/The-building-of-the-Brotherhood-of-Blackheads-is-one-of-the-most-iconic-buildings-of-Old-Riga--1366x768.jpg">
+            <h3>Museums</h3>
+            <p>blablablablaa</p>
+            </div>
+        <div class="places-col">
+            <img src="https://ritakafija.lv/wp-content/uploads/2024/09/Clipboard01-7.jpg">
+        <h3>Vides objekti</h3>
+        <p>grgergergergrggerg</p>
+        </div>
+        </div>
+
+    </section>
+    <section class="">
+
+    </section>
+
+
+    <!------------- JavaScript for Menu------->
+
+    <script>
+        var navLinks = document.getElementById("navLinks");
+        function showMenu() {
+
+            navLinks.style.right = "0";
+        }
+        function hideMenu() {
+            navLinks.style.right = "-200px";
+        }
+    </script>
+</body>
+
 </html>
