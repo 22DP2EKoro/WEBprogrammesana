@@ -73,6 +73,7 @@ img{
     max-width: 320px;
 }
 .museums{
+    background-color: rgb(37, 194, 194);
     display: flex;
     flex-direction: column;
     gap: 20px;
@@ -84,7 +85,7 @@ img{
     align-items: flex-start;
 }
 .places-col {
-    flex-basis: 25%;
+    flex-basis: 20%;
     background: #a99b9b;
     border-radius: 10px;
     margin-bottom: 5%;
@@ -101,7 +102,18 @@ img{
 }
 
 .text-box{
-    flex-basis: 50%;
+    flex-basis: 60%;
+}
+
+.text-box h3 {
+    color: black;
+    text-align: center;
+    font-weight: 600;
+    flex-basis: 60%;
+    margin: 50px 0;
+}
+.text-box p{
+    color: black;
 }
 
 .visit-button {
@@ -121,18 +133,7 @@ img{
 }
 
 
-.text-box h3 {
-    color: black;
-    text-align: center;
-    font-weight: 600;
-    margin: 10px 0;
-}
-.text-box p{
-    color: black;
-}
-
 .places-col:hover {
     transform: translateY(-10px);
     box-shadow: 0 0 20px 0px rgba(0,0,0,0.2);
 }
-
