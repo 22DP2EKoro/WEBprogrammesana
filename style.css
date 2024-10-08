@@ -198,3 +198,24 @@ footer {
         flex-direction: column;
     }
 }
+
+
+.tourism_sight {
+    padding: 50px 0; 
+    text-align: center; 
+    background-color: #fff; 
+}
+
+.tourism_sight h1 {
+    font-size: 36px;
+    color: #000000;
+    margin-bottom: 20px;
+}
+
+.tourism_sight video {
+    width: 80%;
+    max-width: 1000px;
+    background-color: #fff; 
+    border-radius: 10px; 
+
+}
