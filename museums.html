@@ -8,6 +8,10 @@
     <link rel="stylesheet" href="stylemus.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link
+    href="https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&display=swap"
+    rel="stylesheet">
+    
 </head>
 
 <body>
@@ -19,8 +23,18 @@
                     <li><a href="index.html">HOME</a></li>
                     <li><a href="restaurants.html">RESTAURANTS</a></li>
                     <li><a href="#">CONTACTS</a></li>
+                    <!----------- Dark mode ------------->
+                    <button class="dark-mode-o" onclick="myFunction()">Dark mode</button>
+                    
+                    <script>
+                        function myFunction() {
+                            var element = document.body;
+                            element.classList.toggle("dark-mode");
+                        }
+                    </script>
                 </ul>
             </div>
+            <i class="fa fa-bars" onclick="showMenu()"></i>
         </nav>
 
         <div class="row">
@@ -79,7 +93,19 @@
             </div>
         </div>
     </footer>
+    <!------------- JavaScript for Menu------->
 
+    <script>
+        var navLinks = document.getElementById("navLinks");
+        function showMenu() {
+
+            navLinks.style.right = "0";
+        }
+        function hideMenu() {
+            navLinks.style.right = "-200px";
+        }
+    </script>
 </body>
 
 </html>
+
