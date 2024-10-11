@@ -18,10 +18,21 @@
             <div class="nav-links" id="navLinks">
                 <i class="fa fa-times" onclick="hideMenu()"></i>
                 <ul>
+
                     <li><a href="index.html">HOME</a></li>
                     <li><a href="museums.html">MUSEUMS</a></li>
                     <li><a href="restaurants.html">RESTAURANTS</a></li>
                     <li><a href="#">CONTACTS</a></li>
+                    <!----------- Dark mode ------------->
+                    
+                    <button class="dark-mode-o" onclick="myFunction()">Dark mode</button>
+                    
+                    <script>
+                        function myFunction() {
+                            var element = document.body;
+                            element.classList.toggle("dark-mode");
+                        }
+                    </script>
                 </ul>
             </div>
             <i class="fa fa-bars" onclick="showMenu()"></i>
@@ -29,9 +40,10 @@
         <div class="text-box">
             <h1>Explore Riga</h1>
             <p>Comprehensive guide to the city of Riga's cultural events and local dining experiences.</p>
-    
+
         </div>
     </section>
+
 
 
     <section class="karte">
@@ -74,7 +86,7 @@
                 <img
                     src="https://www.latvia.travel/sites/default/files/styles/max_1300x1300/public/media_image/tourism_sight/44256507012_666bad3106_k.jpg?itok=D0Mi0rK_">
                 <h3>Parks</h3>
-                <p>gParks provide a peaceful escape into nature,
+                <p>Parks provide a peaceful escape into nature,
                     offering green spaces for relaxation, recreation, and fresh air amidst the hustle of daily life.
                 </p>
             </div>
@@ -85,20 +97,17 @@
     <section class="tourism_sight">
         <h1>VIRAL TOUR</h1>
         <video controls autoplay muted>
-            <source src="https://videos.pexels.com/video-files/8243661/8243661-uhd_2732_1440_24fps.mp4" type="video/mp4">
-            <source src="https://videos.pexels.com/video-files/8243661/8243661-uhd_2732_1440_24fps.ogg" type="video/ogg">
+            <source src="https://videos.pexels.com/video-files/8243661/8243661-uhd_2732_1440_24fps.mp4"
+                type="video/mp4">
+            <source src="https://videos.pexels.com/video-files/8243661/8243661-uhd_2732_1440_24fps.ogg"
+                type="video/ogg">
             Your browser does not support the video tag.
-          </video>
-          <video controls autoplay muted>
+        </video>
+        <video controls autoplay muted>
             <source src="https://videos.pexels.com/video-files/8467767/8467767-hd_1920_1080_30fps.mp4" type="video/mp4">
             <source src="https://videos.pexels.com/video-files/8467767/8467767-hd_1920_1080_30fps.ogg" type="video/ogg">
             Your browser does not support the video tag.
-          </video>
-          <video controls autoplay muted>
-            <source src="https://videos.pexels.com/video-files/8467650/8467650-hd_1920_1080_30fps.mp4" type="video/mp4">
-            <source src="https://videos.pexels.com/video-files/8467650/8467650-hd_1920_1080_30fps.ogg" type="video/ogg">
-            Your browser does not support the video tag.
-          </video>
+        </video>
     </section>
 
 
