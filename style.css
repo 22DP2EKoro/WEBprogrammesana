@@ -236,7 +236,9 @@ footer {
   
   .footer-content p {
     margin: 0;
-    font-size: 10px;
+    font-size: 14px;
+    color: #bbbbbb;
+
   }
   
   .social-links a {
@@ -285,6 +287,3 @@ footer {
         padding: 30px;
     }
 }
-
-
-
