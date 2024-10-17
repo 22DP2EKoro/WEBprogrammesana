@@ -18,22 +18,30 @@
             <div class="nav-links" id="navLinks">
                 <i class="fa fa-times" onclick="hideMenu()"></i>
                 <ul>
+                    <div class="dropdown">
+                        <button onclick="myFunction()" class="dropbtn">CONTACTS</button>
+                        <div id="myDropdown" class="dropdown-content">
+                          <a href="#">Phone number</a>
+                          <a href="#">E-pasts</a>
+                          <a href="#">Inbox</a>
+                        </div>
+                      </div>
 
                     <li><a href="index.html">HOME</a></li>
                     <li><a href="museums.html">MUSEUMS</a></li>
-                    <li><a href="restaurants.html">RESTAURANTS</a></li>
-                    <li><a href="#">CONTACTS</a></li>
-                    <!----------- Dark mode ------------->
-                    
-                    <button class="dark-mode-o" onclick="myFunction()">Dark mode</button>
-                    
-                    <script>
-                        function myFunction() {
-                            var element = document.body;
-                            element.classList.toggle("dark-mode");
-                        }
-                    </script>
-                </ul>
+                    <li><a href="restaurants.html">RESTAURANTS</a></li>     
+            </div>
+            <!----------- Dark mode ------------->
+
+            <button class="dark-mode-o" onclick="myFunction1()">Dark mode</button>
+
+            <script>
+                function myFunction1() {
+                    var element = document.body;
+                    element.classList.toggle("dark-mode");
+                }
+            </script>
+            </ul>
             </div>
             <i class="fa fa-bars" onclick="showMenu()"></i>
         </nav>
@@ -137,6 +145,28 @@
             navLinks.style.right = "-200px";
         }
     </script>
+
+
+    <!--------Dropdown---->
+    <script>/* When the user clicks on the button,
+        toggle between hiding and showing the dropdown content */
+        function myFunction() {
+          document.getElementById("myDropdown").classList.toggle("show");
+        }
+        
+        // Close the dropdown menu if the user clicks outside of it
+        window.onclick = function(event) {
+          if (!event.target.matches('.dropbtn')) {
+            var dropdowns = document.getElementsByClassName("dropdown-content");
+            var i;
+            for (i = 0; i < dropdowns.length; i++) {
+              var openDropdown = dropdowns[i];
+              if (openDropdown.classList.contains('show')) {
+                openDropdown.classList.remove('show');
+              }
+            }
+          }
+        }</script>
 </body>
 
 </html>
