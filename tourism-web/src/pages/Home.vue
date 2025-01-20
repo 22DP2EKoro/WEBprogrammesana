@@ -14,10 +14,10 @@
         <section class="header">
             <nav>
                 <div class="nav-links" id="navLinks">
-                    <i class="fa fa-times" onclick="hideMenu()"></i>
+                    <i class="fa fa-times" @click="hideMenu()"></i>
                     <ul>
                         <div class="dropdown">
-                            <button onclick="myFunction()" class="dropbtn">CONTACTS</button>
+                            <button @click="myFunction()" class="dropbtn">CONTACTS</button>
                             <div id="myDropdown" class="dropdown-content">
                                 <a href="#">Phone number</a>
                                 <a href="#">E-pasts</a>
@@ -32,8 +32,8 @@
                 </div> 
 
                 <!-- Dark mode button -->
-                <button class="dark-mode-o" onclick="myFunction1()">Dark mode</button>
-                <i class="fa fa-bars" onclick="showMenu()"></i>
+                <button class="dark-mode-o" @click="myFunction1()">Dark mode</button>
+                <i class="fa fa-bars" @click="showMenu()"></i>
             </nav>
             <div class="text-box">
                 <h1>Explore Riga</h1>
@@ -145,7 +145,6 @@ function myFunction() {
     document.getElementById("myDropdown").classList.toggle("show");
 }
 
-// Close the dropdown menu if the user clicks outside of it
 window.onclick = function (event) {
     if (!event.target.matches('.dropbtn')) {
         var dropdowns = document.getElementsByClassName("dropdown-content");
@@ -434,47 +433,7 @@ footer {
     color: #00aced;
 }
 
-@media(max-width: 700px) {
-    .text-box h1 {
-        font-size: 20px;
-    }
 
-    .row {
-        flex-direction: column;
-    }
-
-    .header {
-        min-height: 50vh;
-    }
-
-    .nav-links ul li {
-        display: block;
-    }
-
-    .nav-links {
-        position: absolute;
-        background: #991499;
-        height: 100vh;
-        width: 200px;
-        top: 0;
-        right: -200px;
-        text-align: left;
-        z-index: 2;
-        transition: 0.5s;
-    }
-
-    nav .fa {
-        display: block;
-        color: #fff;
-        margin: 10px;
-        font-size: 22px;
-        cursor: pointer;
-    }
-
-    .nav-links ul {
-        padding: 30px;
-    }
-}
 
 /* DROPDOWN */
 
@@ -522,5 +481,47 @@ footer {
 /* Show the dropdown menu (use JS to add this class to the .dropdown-content container when the user clicks on the dropdown button) */
 .show {
     display: block;
+}
+
+@media(max-width: 700px) {
+    .text-box h1 {
+        font-size: 20px;
+    }
+
+    .row {
+        flex-direction: column;
+    }
+
+    .header {
+        min-height: 50vh;
+    }
+
+    .nav-links ul li {
+        display: block;
+    }
+
+    .nav-links {
+        position: absolute;
+        background: #991499;
+        height: 100vh;
+        width: 200px;
+        top: 0;
+        right: -200px;
+        text-align: left;
+        z-index: 2;
+        transition: 0.5s;
+    }
+
+    nav .fa {
+        display: block;
+        color: #fff;
+        margin: 10px;
+        font-size: 22px;
+        cursor: pointer;
+    }
+
+    .nav-links ul {
+        padding: 30px;
+    }
 }
 </style>
