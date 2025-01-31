@@ -28,6 +28,7 @@
                         <li><a href="Home.vue">HOME</a></li>
                         <li><a href="Museums.vue">MUSEUMS</a></li>
                         <li><a href="Restaurants.vue">RESTAURANTS</a></li>
+                        <li><a href="#">PLANOTAJS</a></li>
                     </ul> 
                 </div> 
 
@@ -46,7 +47,9 @@
 
         <section class="karte">
             <h1>Riga</h1>
-            <p>gggrgrgrg</p>
+            <p>Riga is the capital and largest city of Latvia, a country in Northern Europe. 
+                It is located on the shores of the Baltic Sea at the mouth of the Daugava River.
+                 Riga is renowned for its rich history, stunning architecture, and cultural significance.</p>
             <iframe
                 src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d139178.6403659644!2d23.964268579406752!3d56.97164918740555!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x46eecfb0e5073ded%3A0x400cfcd68f2fe30!2zUsSrZ2E!5e0!3m2!1slv!2slv!4v1727600341753!5m2!1slv!2slv"
                 width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
@@ -125,42 +128,6 @@
         </footer>
     </body>
 </template>
-
-<script>
-
-var navLinks = document.getElementById("navLinks");
-function showMenu() {
-
-    navLinks.style.right = "0";
-}
-function hideMenu() {
-    navLinks.style.right = "-200px";
-}
-function myFunction1() {
-    var element = document.body;
-    element.classList.toggle("dark-mode");
-}
-
-function myFunction() {
-    document.getElementById("myDropdown").classList.toggle("show");
-}
-
-window.onclick = function (event) {
-    if (!event.target.matches('.dropbtn')) {
-        var dropdowns = document.getElementsByClassName("dropdown-content");
-        var i;
-        for (i = 0; i < dropdowns.length; i++) {
-            var openDropdown = dropdowns[i];
-            if (openDropdown.classList.contains('show')) {
-                openDropdown.classList.remove('show');
-            }
-        }
-    }
-}
-</script>
-
-
-
 
 
 <style scoped>
@@ -438,15 +405,24 @@ footer {
 /* DROPDOWN */
 
 .dropbtn {
-    padding: 16px;
-    font-size: 16px;
-    cursor: pointer;
+    color: #fff;
+    text-decoration: none;
+    font-size: 20px;
+    position: relative;
+    transition: color 0.3s ease;
 }
+
 
 /* Dropdown button on hover & focus */
 .dropbtn:hover,
 .dropbtn:focus {
-    background-color: #9b0887;
+    content: '';
+    width: 0%;
+    height: 7px;
+    background: #991499;
+    display: block;
+    margin: auto;
+    transition: 0.5s;
 }
 
 /* The container <div> - needed to position the dropdown content */
@@ -463,6 +439,9 @@ footer {
     min-width: 160px;
     box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
     z-index: 1;
+    transition: opacity 0.3s ease, transform 0.3s ease;
+    opacity: 0;
+    transform: translateY(-10px);
 }
 
 /* Links inside the dropdown */
@@ -479,8 +458,10 @@ footer {
 }
 
 /* Show the dropdown menu (use JS to add this class to the .dropdown-content container when the user clicks on the dropdown button) */
-.show {
+.dropdown-content.show {
     display: block;
+    opacity: 1;
+    transform: translateY(0);
 }
 
 @media(max-width: 700px) {
@@ -525,3 +506,37 @@ footer {
     }
 }
 </style>
+<script>
+
+var navLinks = document.getElementById("navLinks");
+function showMenu() {
+
+    navLinks.style.right = "0";
+}
+function hideMenu() {
+    navLinks.style.right = "-200px";
+}
+function myFunction1() {
+    var element = document.body;
+    element.classList.toggle("dark-mode");
+}
+
+function myFunction(event) {
+    const dropdown = document.getElementById("myDropdown");
+    dropdown.classList.toggle("show");
+    event.stopPropagation(); // Prevents the window click event from immediately closing the dropdown.
+}
+
+window.onclick = function (event) {
+    if (!event.target.matches('.dropbtn')) {
+        var dropdowns = document.getElementsByClassName("dropdown-content");
+        var i;
+        for (i = 0; i < dropdowns.length; i++) {
+            var openDropdown = dropdowns[i];
+            if (openDropdown.classList.contains('show')) {
+                openDropdown.classList.remove('show');
+            }
+        }
+    }
+}
+</script>

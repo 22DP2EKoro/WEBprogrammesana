@@ -93,18 +93,7 @@
 </template>
 
 
-<script>
-function myFunction() {
-    var element = document.body;
-    element.classList.toggle("dark-mode");
-}
-function showMenu() {
-    navLinks.style.right = "0";
-}
-function hideMenu() {
-    navLinks.style.right = "-200px";
-}
-</script>
+
 
 <style scoped>
     * {
@@ -399,3 +388,17 @@ footer {
     }
 }
 </style>
+
+
+<script>
+function myFunction() {
+    var element = document.body;
+    element.classList.toggle("dark-mode");
+}
+function showMenu() {
+    navLinks.style.right = "0";
+}
+function hideMenu() {
+    navLinks.style.right = "-200px";
+}
+</script>

@@ -38,6 +38,17 @@
               <div class="col"></div>
           </div>
       </div>
+      <div class="locations">
+        <h1>Locations</h1>
+        <p>A great location is easily accessible,
+           either centrally situated in a city or near well-known landmarks, with convenient public transport links or parking.</p>
+           <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d139178.6403659644!2d23.964268579406752!3d56.97164918740555!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x46eecfb0e5073ded%3A0x400cfcd68f2fe30!2zUsSrZ2E!5e0!3m2!1slv!2slv!4v1727600341753!5m2!1slv!2slv"
+                width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+                referrerpolicy="no-referrer-when-downgrade"></iframe>
+          
+
+      </div>
 
       
 
@@ -56,18 +67,7 @@
 </template>
 
 
-<script>
-function myFunction() {
-  var element = document.body;
-  element.classList.toggle("dark-mode");
-}
-function showMenu() {
-  navLinks.style.right = "0";
-}
-function hideMenu() {
-  navLinks.style.right = "-200px";
-}
-</script>
+
 
 <style scoped>
   * {
@@ -290,3 +290,16 @@ footer {
   }
 }
 </style>
+
+<script>
+function myFunction() {
+  var element = document.body;
+  element.classList.toggle("dark-mode");
+}
+function showMenu() {
+  navLinks.style.right = "0";
+}
+function hideMenu() {
+  navLinks.style.right = "-200px";
+}
+</script>
