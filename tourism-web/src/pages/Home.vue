@@ -1,5 +1,7 @@
 <template>
 
+
+
     <head>
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>ExploreRiga</title>
@@ -11,88 +13,74 @@
     </head>
 
     <body>
+
         <section class="header">
             <nav>
                 <div class="nav-links" id="navLinks">
-                    <i class="fa fa-times" @click="hideMenu()"></i>
+                    <i class="fa fa-times" onclick="hideMenu()"></i>
                     <ul>
-                        <div class="dropdown">
-                            <button @click="myFunction()" class="dropbtn">CONTACTS</button>
+                        <!-- Make the button consistent with the others -->
+                        <li class="dropdown">
+                            <a href="#" class="dropbtn" onclick="myFunction(event)">CONTACTS</a>
                             <div id="myDropdown" class="dropdown-content">
                                 <a href="#">Phone number</a>
                                 <a href="#">E-pasts</a>
                                 <a href="#">Inbox</a>
                             </div>
-                        </div>
-
+                        </li>
                         <li><a href="Home.vue">HOME</a></li>
                         <li><a href="Museums.vue">MUSEUMS</a></li>
                         <li><a href="Restaurants.vue">RESTAURANTS</a></li>
-                        <li><a href="#">PLANOTAJS</a></li>
-                    </ul> 
-                </div> 
+                        <li><a href="Intro.vue">SIGN IN</a></li>
+                    </ul>
+                </div>
 
                 <!-- Dark mode button -->
-                <button class="dark-mode-o" @click="myFunction1()">Dark mode</button>
-                <i class="fa fa-bars" @click="showMenu()"></i>
+                <button class="dark-mode-o" onclick="myFunction1()">Dark mode</button>
+                <i class="fa fa-bars" onclick="showMenu()"></i>
             </nav>
             <div class="text-box">
                 <h1>Explore Riga</h1>
                 <p>Comprehensive guide to the city of Riga's cultural events and local dining experiences.</p>
             </div>
         </section>
-
-
-
-
         <section class="karte">
             <h1>Riga</h1>
-            <p>Riga is the capital and largest city of Latvia, a country in Northern Europe. 
+            <p>Riga is the capital and largest city of Latvia, a country in Northern Europe.
                 It is located on the shores of the Baltic Sea at the mouth of the Daugava River.
-                 Riga is renowned for its rich history, stunning architecture, and cultural significance.</p>
+                Riga is renowned for its rich history, stunning architecture, and cultural significance.</p>
             <iframe
                 src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d139178.6403659644!2d23.964268579406752!3d56.97164918740555!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x46eecfb0e5073ded%3A0x400cfcd68f2fe30!2zUsSrZ2E!5e0!3m2!1slv!2slv!4v1727600341753!5m2!1slv!2slv"
                 width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
                 referrerpolicy="no-referrer-when-downgrade"></iframe>
         </section>
 
-
-
-
-
-        <!-------- Places ----->
-
         <section class="places">
             <h1>Places to visit</h1>
-            <p>Exploring new places offers a unique opportunity to
-                experience diverse cultures, discover breathtaking landscapes, and create unforgettable memories.</p>
+            <p>Exploring new places offers a unique opportunity to experience diverse cultures, discover breathtaking
+                landscapes, and create unforgettable memories.</p>
 
             <div class="row">
                 <div class="places-col">
-                    <img src="https://s.inyourpocket.com/gallery/257731.jpg">
+                    <img src="https://s.inyourpocket.com/gallery/257731.jpg" alt="Restaurant">
                     <h3>Restaurants</h3>
-                    <p>
-                        Restaurants provide a space to enjoy delicious food, experience different cuisines
-                    </p>
+                    <p>Restaurants provide a space to enjoy delicious food, experience different cuisines.</p>
                 </div>
                 <div class="places-col">
-                    <img
-                        src="https://assets.architecturaldigest.in/photos/60081fc808ae763b9ae83f5f/16:9/w_2560%2Cc_limit/The-building-of-the-Brotherhood-of-Blackheads-is-one-of-the-most-iconic-buildings-of-Old-Riga--1366x768.jpg">
+                    <img src="https://assets.architecturaldigest.in/photos/60081fc808ae763b9ae83f5f/16:9/w_2560%2Cc_limit/The-building-of-the-Brotherhood-of-Blackheads-is-one-of-the-most-iconic-buildings-of-Old-Riga--1366x768.jpg"
+                        alt="Museum">
                     <h3>Museums</h3>
-                    <p>
-                        Museums offer a fascinating journey through history
-                    </p>
+                    <p>Museums offer a fascinating journey through history.</p>
                 </div>
                 <div class="places-col">
-                    <img
-                        src="https://www.latvia.travel/sites/default/files/styles/max_1300x1300/public/media_image/tourism_sight/44256507012_666bad3106_k.jpg?itok=D0Mi0rK_">
+                    <img src="https://www.latvia.travel/sites/default/files/styles/max_1300x1300/public/media_image/tourism_sight/44256507012_666bad3106_k.jpg?itok=D0Mi0rK_"
+                        alt="Park">
                     <h3>Parks</h3>
-                    <p>Parks provide a peaceful escape into nature,
-                        offering green spaces for relaxation, recreation, and fresh air amidst the hustle of daily life.
-                    </p>
+                    <p>Parks provide a peaceful escape into nature, offering green spaces for relaxation, recreation,
+                        and
+                        fresh air amidst the hustle of daily life.</p>
                 </div>
             </div>
-
         </section>
 
         <section class="tourism_sight">
@@ -113,9 +101,6 @@
             </video>
         </section>
 
-
-
-
         <footer>
             <div class="footer-content">
                 <p>&copy; 2024 ExploreRiga. Visas tiesības aizsargātas.</p>
@@ -131,407 +116,415 @@
 
 
 <style scoped>
-* {
-    margin: 0;
-    padding: 0;
-    font-family: 'Merriweather', serif;
-    box-sizing: border-box;
-
-}
-
-/* Dark mode*/
-body.dark-mode {
-    background-color: #121212;
-    color: #ffffff;
-}
-
-
-body.dark-mode .places-col {
-    background-color: #333333;
-}
-
-body.dark-mode footer {
-    background-color: #1c1c1c;
-}
-
-body.dark-mode .text-box h1 {
-    color: #ffffff;
-}
-
-body.dark-mode .text-box p {
-    color: #bbbbbb;
-}
-
-body.dark-mode .places-col {
-    background-color: #333333;
-}
-
-body.dark-mode .tourism_sight {
-    background-color: #1c1c1c;
-}
-
-body.dark-mode .tourism_sight h1 {
-    color: #fff
-}
-
-body.dark-mode footer {
-    background-color: #151515;
-}
-
-.dark-mode-o {
-    background-color: #3b053d;
-    color: white;
-    padding: 10px 20px;
-    font-size: 16px;
-    cursor: pointer;
-    transition: background-color 0.3s, transform 0.3s;
-}
-
-.dark-mode-o:hover {
-    background-color: #7b8186;
-    transform: translateY(-1px);
-}
-
-.header {
-    min-height: 100vh;
-    width: 100%;
-    background-image: linear-gradient(rgba(4, 9, 30, 0.7), rgba(4, 9, 30, 0.7)), url("https://newsroom.aviator.aero/content/images/2020/08/1280px-Riga_Cathedral.jpg");
-    background-position: top;
-    background-size: cover;
-    position: relative;
-    background-attachment: fixed;
-
-}
-
-nav {
-    display: flex;
-    padding: 2% 6%;
-    justify-content: space-between;
-    align-items: center;
-
-
-}
-
-.nav-links {
-    flex: 1;
-    text-align: right;
-
-}
-
-.nav-links ul {
-    padding: 0;
-    margin: 0;
-    list-style: none;
-
-}
-
-.nav-links ul li {
-    display: inline-block;
-    padding: 10px 15px;
-    position: relative;
-}
-
-.nav-links ul li a {
-    color: #fff;
-    text-decoration: none;
-    font-size: 20px;
-}
-
-.nav-links ul li::after {
-    content: '';
-    width: 0%;
-    height: 7px;
-    background: #991499;
-    display: block;
-    margin: auto;
-    transition: 0.5s;
-}
-
-.nav-links ul li:hover::after {
-    width: 100%;
-}
-
-.text-box {
-    width: 90%;
-    color: #fff;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    text-align: center;
-}
-
-.text-box h1 {
-    font-size: 62px;
-}
-
-.text-box p {
-    margin: 10px 0 40px;
-    font-size: 25px;
-    color: #fff;
-}
-
-nav .fa {
-    display: none;
-}
-
-
-/*--------karte----------*/
-
-.karte {
-    width: 100%;
-    max-width: 1200px;
-    margin: auto;
-    text-align: center;
-    padding-top: 100px;
-
-}
-
-
-/*--------- places ------*/
-
-
-.places {
-    width: 80%;
-    max-width: 1200px;
-    margin: auto;
-    text-align: center;
-    padding-top: 100px;
-}
-
-h1 {
-    font-size: 36px;
-    font-weight: 600;
-}
-
-p {
-    color: #777;
-    font-size: 14px;
-    font-weight: 300;
-    line-height: 22px;
-    padding: 10px;
-
-}
-
-.row {
-    margin-top: 5%;
-    display: flex;
-    justify-content: space-between;
-}
-
-.places-col {
-    flex-basis: 31%;
-    background: #fff3f3;
-    border-radius: 10px;
-    margin-bottom: 5%;
-    padding: 20px 12px;
-    box-sizing: border-box;
-    transition: 0.5s;
-
-}
-
-.places-col img {
-    width: 100%;
-    height: auto;
-}
-
-h3 {
-    text-align: center;
-    font-weight: 600;
-    margin: 10px 0;
-}
-
-.places-col:hover {
-    transform: translateY(-10px);
-    box-shadow: 0 0 20px 0px rgba(0, 0, 0, 0.2)
-}
-
-.tourism_sight {
-    padding: 50px 0;
-    text-align: center;
-    background-color: #fff;
-}
-
-.tourism_sight h1 {
-    font-size: 36px;
-    color: #000000;
-    margin-bottom: 20px;
-}
-
-.tourism_sight video {
-    width: 80%;
-    max-width: 1000px;
-    background-color: #fff;
-    border-radius: 10px;
-
-}
-
-/*------footer----*/
-footer {
-    background-color: #333;
-    color: #fff;
-    padding: 20px 0;
-    text-align: center;
-    position: relative;
-    bottom: 0;
-    width: 100%;
-}
-
-.footer-content {
-    max-width: 1200px;
-    margin: 0 auto;
-}
-
-.footer-content p {
-    margin: 0;
-    font-size: 14px;
-    color: #bbbbbb;
-
-}
-
-.social-links a {
-    color: #fff;
-    text-decoration: none;
-    margin: 0 10px;
-    transition: color 0.3s ease;
-}
-
-.social-links a:hover {
-    color: #00aced;
-}
-
-
-
-/* DROPDOWN */
-
-.dropbtn {
-    color: #fff;
-    text-decoration: none;
-    font-size: 20px;
-    position: relative;
-    transition: color 0.3s ease;
-}
-
-
-/* Dropdown button on hover & focus */
-.dropbtn:hover,
-.dropbtn:focus {
-    content: '';
-    width: 0%;
-    height: 7px;
-    background: #991499;
-    display: block;
-    margin: auto;
-    transition: 0.5s;
-}
-
-/* The container <div> - needed to position the dropdown content */
-.dropdown {
-    position: relative;
-    display: inline-block;
-}
-
-/* Dropdown Content (Hidden by Default) */
-.dropdown-content {
-    display: none;
-    position: absolute;
-    background-color: #c48080;
-    min-width: 160px;
-    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
-    z-index: 1;
-    transition: opacity 0.3s ease, transform 0.3s ease;
-    opacity: 0;
-    transform: translateY(-10px);
-}
-
-/* Links inside the dropdown */
-.dropdown-content a {
-    color: rgb(255, 255, 255);
-    padding: 12px 16px;
-    text-decoration: none;
-    display: block;
-}
-
-/* Change color of dropdown links on hover */
-.dropdown-content a:hover {
-    background-color: #3a1333;
-}
-
-/* Show the dropdown menu (use JS to add this class to the .dropdown-content container when the user clicks on the dropdown button) */
-.dropdown-content.show {
-    display: block;
-    opacity: 1;
-    transform: translateY(0);
-}
-
-@media(max-width: 700px) {
-    .text-box h1 {
-        font-size: 20px;
-    }
-
-    .row {
-        flex-direction: column;
-    }
-
-    .header {
-        min-height: 50vh;
-    }
-
-    .nav-links ul li {
-        display: block;
-    }
-
-    .nav-links {
-        position: absolute;
-        background: #991499;
-        height: 100vh;
-        width: 200px;
-        top: 0;
-        right: -200px;
-        text-align: left;
-        z-index: 2;
-        transition: 0.5s;
-    }
-
-    nav .fa {
-        display: block;
-        color: #fff;
-        margin: 10px;
-        font-size: 22px;
-        cursor: pointer;
-    }
-
-    .nav-links ul {
-        padding: 30px;
-    }
-}
+  * {
+            margin: 0;
+            padding: 0;
+            font-family: 'Merriweather', serif;
+            box-sizing: border-box;
+
+        }
+
+        /* Dark mode*/
+        body.dark-mode {
+            background-color: #121212;
+            color: #ffffff;
+        }
+
+
+        body.dark-mode .places-col {
+            background-color: #333333;
+        }
+
+        body.dark-mode footer {
+            background-color: #1c1c1c;
+        }
+
+        body.dark-mode .text-box h1 {
+            color: #ffffff;
+        }
+
+        body.dark-mode .text-box p {
+            color: #bbbbbb;
+        }
+
+        body.dark-mode .places-col {
+            background-color: #333333;
+        }
+
+        body.dark-mode .tourism_sight {
+            background-color: #1c1c1c;
+        }
+
+        body.dark-mode .tourism_sight h1 {
+            color: #fff
+        }
+
+        body.dark-mode footer {
+            background-color: #151515;
+        }
+
+        .dark-mode-o {
+            background-color: #3b053d;
+            color: white;
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+            transition: background-color 0.3s, transform 0.3s;
+        }
+
+        .dark-mode-o:hover {
+            background-color: #7b8186;
+            transform: translateY(-1px);
+        }
+
+        .header {
+            min-height: 100vh;
+            width: 100%;
+            background-image: linear-gradient(rgba(4, 9, 30, 0.7), rgba(4, 9, 30, 0.7)), url("https://newsroom.aviator.aero/content/images/2020/08/1280px-Riga_Cathedral.jpg");
+            background-position: top;
+            background-size: cover;
+            position: relative;
+            background-attachment: fixed;
+
+        }
+
+        nav {
+            display: flex;
+            padding: 2% 6%;
+            justify-content: space-between;
+            align-items: center;
+
+
+        }
+
+        .nav-links {
+            flex: 1;
+            text-align: right;
+
+        }
+
+        .nav-links ul {
+            padding: 0;
+            margin: 0;
+            list-style: none;
+
+        }
+
+        .nav-links ul li {
+            display: inline-block;
+            padding: 10px 15px;
+            position: relative;
+        }
+
+        .nav-links ul li a {
+            color: #fff;
+            text-decoration: none;
+            font-size: 20px;
+        }
+
+        .nav-links ul li::after {
+            content: '';
+            width: 0%;
+            height: 7px;
+            background: #991499;
+            display: block;
+            margin: auto;
+            transition: 0.5s;
+        }
+
+        .nav-links ul li:hover::after {
+            width: 100%;
+        }
+
+        .text-box {
+            width: 90%;
+            color: #fff;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            text-align: center;
+        }
+
+        .text-box h1 {
+            font-size: 62px;
+        }
+
+        .text-box p {
+            margin: 10px 0 40px;
+            font-size: 25px;
+            color: #fff;
+        }
+
+        nav .fa {
+            display: none;
+        }
+
+
+        /*--------karte----------*/
+
+        .karte {
+            width: 100%;
+            max-width: 1200px;
+            margin: auto;
+            text-align: center;
+            padding-top: 100px;
+
+        }
+
+
+        /*--------- places ------*/
+
+
+        .places {
+            width: 80%;
+            max-width: 1200px;
+            margin: auto;
+            text-align: center;
+            padding-top: 100px;
+        }
+
+        h1 {
+            font-size: 36px;
+            font-weight: 600;
+        }
+
+        p {
+            color: #777;
+            font-size: 14px;
+            font-weight: 300;
+            line-height: 22px;
+            padding: 10px;
+
+        }
+
+        .row {
+            margin-top: 5%;
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .places-col {
+            flex-basis: 31%;
+            background: #fff3f3;
+            border-radius: 10px;
+            margin-bottom: 5%;
+            padding: 20px 12px;
+            box-sizing: border-box;
+            transition: 0.5s;
+
+        }
+
+        .places-col img {
+            width: 100%;
+            height: auto;
+        }
+
+        h3 {
+            text-align: center;
+            font-weight: 600;
+            margin: 10px 0;
+        }
+
+        .places-col:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 0 20px 0px rgba(0, 0, 0, 0.2)
+        }
+
+        .tourism_sight {
+            padding: 50px 0;
+            text-align: center;
+            background-color: #fff;
+        }
+
+        .tourism_sight h1 {
+            font-size: 36px;
+            color: #000000;
+            margin-bottom: 20px;
+        }
+
+        .tourism_sight video {
+            width: 80%;
+            max-width: 1000px;
+            background-color: #fff;
+            border-radius: 10px;
+
+        }
+
+        /*------footer----*/
+        footer {
+            background-color: #333;
+            color: #fff;
+            padding: 20px 0;
+            text-align: center;
+            position: relative;
+            bottom: 0;
+            width: 100%;
+        }
+
+        .footer-content {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .footer-content p {
+            margin: 0;
+            font-size: 14px;
+            color: #bbbbbb;
+
+        }
+
+        .social-links a {
+            color: #fff;
+            text-decoration: none;
+            margin: 0 10px;
+            transition: color 0.3s ease;
+        }
+
+        .social-links a:hover {
+            color: #00aced;
+        }
+
+
+
+        /* DROPDOWN */
+
+        /* Style for the Contacts button */
+        .dropbtn {
+            color: #fff;
+            text-decoration: none;
+            font-size: 20px;
+            padding: 10px 15px;
+            display: inline-block;
+            position: relative;
+            background: none;
+            border: none;
+            cursor: pointer;
+        }
+
+        /* Underline effect on hover */
+        .dropbtn::after {
+            content: '';
+            width: 0%;
+            height: 7px;
+            background: #991499;
+            display: block;
+            margin: auto;
+            transition: 0.5s;
+        }
+
+        .dropbtn:hover::after {
+            width: 100%;
+        }
+
+        /* Dropdown container */
+        .dropdown {
+            position: relative;
+            display: inline-block;
+        }
+
+        /* Dropdown content (hidden by default) */
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: #991499;
+            min-width: 160px;
+            box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+            z-index: 1;
+            transition: opacity 0.3s ease, transform 0.3s ease;
+            opacity: 0;
+            transform: translateY(-10px);
+        }
+
+        /* Links inside the dropdown */
+        .dropdown-content a {
+            color: #fff;
+            padding: 12px 16px;
+            text-decoration: none;
+            display: block;
+        }
+
+        /* Hover effect for dropdown links */
+        .dropdown-content a:hover {
+            background-color: #7b125e;
+        }
+
+        /* Show the dropdown */
+        .dropdown-content.show {
+            display: block;
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        @media(max-width: 700px) {
+            .text-box h1 {
+                font-size: 20px;
+            }
+
+            .row {
+                flex-direction: column;
+            }
+
+            .header {
+                min-height: 50vh;
+            }
+
+            .nav-links ul li {
+                display: block;
+            }
+
+            .nav-links {
+                position: absolute;
+                background: #991499;
+                height: 100vh;
+                width: 200px;
+                top: 0;
+                right: -200px;
+                text-align: left;
+                z-index: 2;
+                transition: 0.5s;
+            }
+
+            nav .fa {
+                display: block;
+                color: #fff;
+                margin: 10px;
+                font-size: 22px;
+                cursor: pointer;
+            }
+
+            .nav-links ul {
+                padding: 30px;
+            }
+        }
 </style>
 <script>
-
-var navLinks = document.getElementById("navLinks");
+// Your JavaScript functions
 function showMenu() {
+    document.getElementById("navLinks").style.right = "0";
+}
 
-    navLinks.style.right = "0";
-}
 function hideMenu() {
-    navLinks.style.right = "-200px";
+    document.getElementById("navLinks").style.right = "-200px";
 }
+
 function myFunction1() {
     var element = document.body;
     element.classList.toggle("dark-mode");
 }
 
 function myFunction(event) {
+    event.preventDefault(); // Prevent the default link behavior
     const dropdown = document.getElementById("myDropdown");
     dropdown.classList.toggle("show");
-    event.stopPropagation(); // Prevents the window click event from immediately closing the dropdown.
+    event.stopPropagation(); // Prevent the window click event from immediately closing the dropdown
 }
 
+// Close the dropdown if the user clicks outside of it
 window.onclick = function (event) {
     if (!event.target.matches('.dropbtn')) {
         var dropdowns = document.getElementsByClassName("dropdown-content");
-        var i;
-        for (i = 0; i < dropdowns.length; i++) {
+        for (var i = 0; i < dropdowns.length; i++) {
             var openDropdown = dropdowns[i];
             if (openDropdown.classList.contains('show')) {
                 openDropdown.classList.remove('show');

@@ -19,6 +19,7 @@ const routes = [
     name: 'Restaurants',
     component: Restaurants, 
   },
+  
 ];
 
 const router = createRouter({
